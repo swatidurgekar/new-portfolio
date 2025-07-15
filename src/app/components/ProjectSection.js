@@ -9,16 +9,28 @@ const ProjectSection = () => {
       id: 1,
       title: "Project One",
       tags: ["React", "JavaScript", "CSS"],
+      description: "A tool that summarizes",
+      fullDescription: "This project uses AWS Lambda",
+      image: "/question.jpg",
+      techStack: ["React", "JavaScript", "AWS"]
     },
     {
       id: 2,
       title: "Project Two",
       tags: ["React", "JavaScript", "CSS"],
+      description: "A tool that summarizes",
+      fullDescription: "This project uses AWS Lambda",
+      image: "/question.jpg",
+      techStack: ["React", "JavaScript", "AWS"]
     },
     {
       id: 3,
       title: "Project Three",
       tags: ["React", "JavaScript", "CSS"],
+      description: "A tool that summarizes",
+      fullDescription: "This project uses AWS Lambda",
+      image: "/question.jpg",
+      techStack: ["React", "JavaScript", "AWS"]
     },
   ]
 
@@ -62,8 +74,8 @@ const ProjectSection = () => {
       <h2 className="text-3xl font-bold text-white mb-12 text-center">Projects</h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {projects.map((project, index) => (
-          <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50
-          hover:border-purple-500/50 transition-colors hover:shadow-sm">
+          <button onClick={() => handleProjectClick(project.id)} key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50
+          hover:border-purple-500/50 transition-colors hover:shadow-sm text-left">
             <div className="flex flex-col h-full">
               <h3 className="text-lg font-semibold text-white mb-2">{project.title}</h3>
               <div className="flex flex-wrap gap-1 mt-auto">
@@ -73,9 +85,17 @@ const ProjectSection = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </button>
         ))}
       </div>
+      {selectedProject && (
+        < ProjectModal
+          project={projects.find((project) => project.id === selectedProject)}
+          onClose={handleCloseModal}
+          onNext={handleNextProject}
+          onPrev={handlePrevProject}
+        />
+      )}
     </section>
   );
 }
