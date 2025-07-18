@@ -1,10 +1,20 @@
 import Image from "next/image";
 import { X, ChevronRight, ChevronLeft } from "lucide-react";
+import { useRef } from "react";
 
 export default function ProjectModal({ project, onClose, onNext, onPrev }) {
+    const modalRef = useRef();
+
+    const handleOutsideClick = (e) => {
+        if (modalRef.current === e.target) {
+            onClose();
+        }
+    }
+
     return (
-        <div className="fixed inset-0 bg-gray-800/75 flex items-center justify-center z-50">
-            <div className="bg-gray-900 rounded-lg max-w-4xl w-11/12 max-h-[90vh] overflow-y-auto p-12 h-10/12">
+        <div className="fixed inset-0 bg-gray-800/75 flex items-center justify-center z-50" onClick={handleOutsideClick} ref={modalRef}>
+            <div ref={modalRef} className="bg-gray-900 rounded-lg max-w-4xl w-11/12 max-h-[90vh] overflow-y-auto p-12 h-10/12"
+                onClick={(e) => e.stopPropagation()}>
                 <div className="flex justify-between">
                     <h2 className="text-2xl font-bold text-purple-50">{project.title}</h2>
                     <button onClick={onClose}
