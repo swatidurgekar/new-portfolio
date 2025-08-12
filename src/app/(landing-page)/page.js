@@ -1,5 +1,6 @@
 import ProjectSection from "./components/ProjectSection";
 import PostsSection from "./components/PostsSection";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,12 +21,12 @@ export default function Home() {
           Creating Responsive Websites for customers.
         </p>
         <div className="flex mt-10 gap-4">
-          <button
+          <Link href={"/posts/3"}
             className="px-8 py-3 rounded-lg bg-[var(--primary-500)]
           text-white font-medium hover:bg-[var(--primary-500)]"
           >
             About Me
-          </button>
+          </Link>
           <button
             className="px-8 py-3 rounded-lg bg-[var(--primary-500)])] border
           border-gray-600

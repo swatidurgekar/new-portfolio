@@ -20,7 +20,7 @@ const PostsSection = async () => {
     console.log(posts);
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8" id="blog">
             <div className="flex gap-12 sm:gap-24">
                 <div className="w-72">
                     <h2 className="text-4xl text-bold text-light">Latest from <br /> the blog</h2>
