@@ -7,7 +7,7 @@ const ProjectSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Project One",
+      title: "Todo app",
       tags: ["Nextjs", "JavaScript", "MongoDB"],
       description: "Simple task management.",
       fullDescription: "A simple and user-friendly task management app that allows users to add, mark as complete, and delete daily tasks.",
@@ -16,7 +16,7 @@ const ProjectSection = () => {
     },
     {
       id: 2,
-      title: "Project Two",
+      title: "Group chat",
       tags: ["React", "MySQL", "AWS"],
       description: "Chat application",
       fullDescription: "A real-time chat application enabling multiple users to send/receive messages.",
@@ -25,7 +25,7 @@ const ProjectSection = () => {
     },
     {
       id: 3,
-      title: "Project Three",
+      title: "Ecommerce website",
       tags: ["React", "JavaScript", "CSS"],
       description: "Ecommerce",
       fullDescription: "An e-commerce application where users can browse products, add items to the cart, manage quantities.",
