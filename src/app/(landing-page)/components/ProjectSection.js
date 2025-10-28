@@ -8,29 +8,29 @@ const ProjectSection = () => {
     {
       id: 1,
       title: "Project One",
-      tags: ["React", "JavaScript", "CSS"],
-      description: "A tool that summarizes",
-      fullDescription: "This project uses AWS Lambda",
-      image: "/question.jpg",
-      techStack: ["React", "JavaScript", "AWS"]
+      tags: ["Nextjs", "JavaScript", "MongoDB"],
+      description: "Simple task management.",
+      fullDescription: "A simple and user-friendly task management app that allows users to add, mark as complete, and delete daily tasks.",
+      image: "/todo.png",
+      techStack: ["Nextjs", "JavaScript", "MongoDB", "CSS"]
     },
     {
       id: 2,
       title: "Project Two",
-      tags: ["React", "JavaScript", "CSS"],
-      description: "A tool that summarizes",
-      fullDescription: "This project uses AWS Lambda",
-      image: "/question.jpg",
-      techStack: ["React", "JavaScript", "AWS"]
+      tags: ["React", "MySQL", "AWS"],
+      description: "Chat application",
+      fullDescription: "A real-time chat application enabling multiple users to send/receive messages.",
+      image: "/group-chat.png",
+      techStack: ["React", "JavaScript", "AWS", "MySQL"]
     },
     {
       id: 3,
       title: "Project Three",
       tags: ["React", "JavaScript", "CSS"],
-      description: "A tool that summarizes",
-      fullDescription: "This project uses AWS Lambda",
-      image: "/question.jpg",
-      techStack: ["React", "JavaScript", "AWS"]
+      description: "Ecommerce",
+      fullDescription: "An e-commerce application where users can browse products, add items to the cart, manage quantities.",
+      image: "/ecommerce.png",
+      techStack: ["React", "Redux", "Firebase", "CSS"]
     },
   ]
 
@@ -72,7 +72,7 @@ const ProjectSection = () => {
   return (
     <section id="projects" className="px-4 py-32 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-white mb-12 text-center">Projects</h2>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project, index) => (
           <button onClick={() => handleProjectClick(project.id)} key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50
           hover:border-purple-500/50 transition-colors hover:shadow-sm text-left">

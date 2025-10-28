@@ -13,7 +13,7 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
 
     return (
         <div className="fixed inset-0 bg-gray-800/75 flex items-center justify-center z-50" onClick={handleOutsideClick} ref={modalRef}>
-            <div ref={modalRef} className="bg-gray-900 rounded-lg max-w-4xl w-11/12 max-h-[90vh] overflow-y-auto p-12 h-10/12"
+            <div ref={modalRef} className="bg-gray-900 rounded-lg max-w-4xl w-11/12 max-h-[60vh] overflow-y-auto p-12 h-10/12"
                 onClick={(e) => e.stopPropagation()}>
                 <div className="flex justify-between">
                     <h2 className="text-2xl font-bold text-purple-50">{project.title}</h2>
@@ -35,7 +35,7 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
                         </div>
                     </div>
                     <div className="relative h-64 w-full md:w-1/2">
-                        <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" />
+                        <Image src={project.image} alt={project.title} layout="fill" />
                     </div>
                     <div className="absolute top-1/2 -translate-y-1/2 flex justify-between w-11/12 max-w-4xl">
                         <button onClick={onPrev} className="bg-gray-800/50 rounded-full p-2 hover:bg-gray-800/70

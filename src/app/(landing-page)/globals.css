@@ -61,3 +61,37 @@ body {
     @apply text-base leading-normal font-semibold mt-4 mb-3 scroll-mt-[100px]
   }
 }
+
+.pattern-background {
+  position: absolute;
+  top: -6rem;
+  bottom: -6rem;
+  left: -6rem;
+  right: -6rem;
+  width: calc(100% + 12rem);
+  z-index: -1;
+  opacity: 0.3;
+  background-image:
+    linear-gradient(#9696ff 3.00000000003px, transparent 3px),
+    linear-gradient(to right, #9696ff 3.00000000003px, transparent 3px);
+  background-size: 66px 66px;
+
+  @media (max-wwidth: 768px) {
+    width: calc(100% + 4rem);
+    height: calc(100% + 4rem);
+    top: -3rem;
+    left: -3rem;
+    right: -3rem;
+    bottom: -3rem;
+    background-size: 30px 30px;
+  }
+
+  /* -webkit-mask: radial-gradient(circle at center, black 0%, transparent 70%);
+  mask: radial-gradient(circle at center, black 0%, transparent 70%); */
+
+}
+
+.default-fade {
+  -webkit-mask: radial-gradient(ellipse 70% 60% at center, rgb(15, 23, 42) 0%, transparent 70%);
+  mask: radial-gradient(ellipse 70% 60% at center, rgb(15, 23, 42) 0%, transparent 70%);
+}
