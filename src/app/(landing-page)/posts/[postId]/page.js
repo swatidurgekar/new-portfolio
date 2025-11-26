@@ -3,7 +3,6 @@ import { RichText as SerializedRichText } from "@payloadcms/richtext-lexical/rea
 
 const Page = async ({ params }) => {
     const { postId } = await params;
-    console.log(postId);
 
     const payload = await getPayload();
     let post = await payload.find({

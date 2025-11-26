@@ -22,7 +22,7 @@ const PostsSection = async () => {
     })
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8" id="blog">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 sm:py-24 lg:px-8 lg:py-24" id="blog">
             <div className="flex gap-12 sm:gap-24 md:flex-row flex-col">
                 <div className="w-72">
                     <h2 className="text-4xl text-bold text-light">Latest from <br /> the blog</h2>

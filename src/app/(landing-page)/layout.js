@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         antialiased bg-gray-900 text-slate-50`}
       >
         <Navbar />
-        <div className="mt-7 md:mt-20">
+        <div className="mt-20 md:mt-20">
           {children}
         </div>
         <Footer />

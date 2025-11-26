@@ -70,7 +70,7 @@ const ProjectSection = () => {
 
 
   return (
-    <section id="projects" className="px-4 py-32 sm:px-6 lg:px-8">
+    <section id="projects" className="px-4 py-24 sm:px-6 sm:py-32 lg:px-8 lg:py-32">
       <h2 className="text-3xl font-bold text-white mb-12 text-center">Projects</h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project, index) => (
