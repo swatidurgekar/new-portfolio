@@ -10,9 +10,9 @@ const Navbar = () => {
                 </Link>
                 <div className="menu hidden md:block md:w-auto" id="navbar">
                     <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-                        <li key="about"><Link href="#about" className="hover:text-slate-200">About</Link></li>
-                        <li key="projects"><Link href="#projects" className="hover:text-slate-200">Projects</Link></li>
-                        <li><Link href="#blog" className="hover:text-slate-200">Blog</Link></li>
+                        <li key="about"><Link href="/#about" className="hover:text-slate-200">About</Link></li>
+                        <li key="projects"><Link href="/#projects" className="hover:text-slate-200">Projects</Link></li>
+                        <li><Link href="/#blog" className="hover:text-slate-200">Blog</Link></li>
                     </ul>
                 </div>
             </div>
