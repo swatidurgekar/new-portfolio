@@ -43,7 +43,7 @@ const HeroSection = () => {
             <p className="mt-6 text-xl text-gray-300 leading-8">
                 Creating Responsive Websites for customers.
             </p>
-            <div className="flex mt-10 gap-4">
+            {/* <div className="flex mt-10 gap-4">
                 <Link href={"/posts/3"}
                     className="px-8 py-3 rounded-lg bg-[var(--primary-500)]
           text-white font-medium hover:bg-[var(--primary-500)]"
@@ -57,7 +57,7 @@ const HeroSection = () => {
                 >
                     Contact Me
                 </button>
-            </div>
+            </div> */}
         </div>
     )
 }

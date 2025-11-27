@@ -1,10 +1,13 @@
+export const revalidate = 60; // cache for 60 seconds
+
 import { getPayload } from "../../../../lib/payload";
-import { RichText as SerializedRichText } from "@payloadcms/richtext-lexical/react";
+import RichTextClient from "../../components/RichTextClient";
 
 const Page = async ({ params }) => {
     const { postId } = await params;
 
     const payload = await getPayload();
+
     let post = await payload.find({
         collection: "posts",
         where: {
@@ -12,17 +15,16 @@ const Page = async ({ params }) => {
         }
     })
 
-    if (!post) {
+    if (!post?.docs?.length) {
         return <div>Post not found</div>
     }
 
     let data = post.docs[0];
-    console.log(data);
 
     return (
         <div className="mx-auto container p-8 pb-20 sm:p-20">
             <h1 className="text-5xl font-bold mb-5 text-center leading-normal">{data.title}</h1>
-            <SerializedRichText className="payload-richtext" data={data.content} />
+            <RichTextClient className="payload-richtext" content={data.content} />
         </div>
     )
 }
