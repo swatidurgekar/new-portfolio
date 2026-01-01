@@ -11,7 +11,9 @@ const Page = async ({ params }) => {
     let post = await payload.find({
         collection: "posts",
         where: {
-            id: postId
+            id: {
+                equals: postId
+            }
         }
     })
 

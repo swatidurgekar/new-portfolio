@@ -38,7 +38,7 @@ const HeroSection = () => {
                 <div className="absolute top-8 right-8 sm:w-[300px] sm:h-[300px] w-[100px] h-[100px] bg-purple-400/70 rounded-full blur-xl"></div>
             </div>
             <h1 className="text-4xl font-bold tracking-light">
-                Software developer
+                Software Developer
             </h1>
             <p className="mt-6 text-xl text-gray-300 leading-8">
                 Creating Responsive Websites for customers.
