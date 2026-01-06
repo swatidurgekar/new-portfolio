@@ -1,6 +1,9 @@
 "use client"
 import { useState } from "react";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import { MdOutlineMail } from "react-icons/md";
 
 const HeroSection = () => {
     const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
@@ -38,26 +41,28 @@ const HeroSection = () => {
                 <div className="absolute top-8 right-8 sm:w-[300px] sm:h-[300px] w-[100px] h-[100px] bg-purple-400/70 rounded-full blur-xl"></div>
             </div>
             <h1 className="text-4xl font-bold tracking-light">
-                Software Developer
+                Swati Durgekar
             </h1>
-            <p className="mt-6 text-xl text-gray-300 leading-8">
+            <h2 className="text-lg text-purple-400/70">
+                I'm a Software Developer
+            </h2>
+            <p className="mt-6 text-lg text-gray-300 leading-8">
                 Creating Responsive Websites for customers.
             </p>
-            {/* <div className="flex mt-10 gap-4">
-                <Link href={"/posts/3"}
-                    className="px-8 py-3 rounded-lg bg-[var(--primary-500)]
-          text-white font-medium hover:bg-[var(--primary-500)]"
-                >
-                    About Me
-                </Link>
-                <button
-                    className="px-8 py-3 rounded-lg bg-slate-900 border
-          border-gray-600
-        font-medium hover:bg-[var(--primary-500)]"
-                >
-                    Contact Me
-                </button>
-            </div> */}
+            <div className="mt-5 gap-5 flex">
+                <a className="px-2 py-2 text-xs rounded-xl text-purple-200 border
+                   border-purple-500/30 cursor-pointer" target="_blank" href="https://github.com/swatidurgekar/">
+                    <FaGithub size={20} style={{ display: "inline" }} />
+                </a>
+                <a className="px-2 py-2 text-xs rounded-xl text-purple-200 border
+                   border-purple-500/30" target="_blank" href="https://www.linkedin.com/in/swatidurgekar/">
+                    <FaLinkedin size={20} style={{ display: "inline" }} />
+                </a>
+                <a className="px-2 py-2 text-xs rounded-xl text-purple-200 border
+                   border-purple-500/30" target="_blank" href="mailto:swatidurgekar04@gmail.com">
+                    <MdOutlineMail size={25} style={{ display: "inline" }} />
+                </a>
+            </div>
         </div>
     )
 }
