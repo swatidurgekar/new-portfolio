@@ -44,7 +44,7 @@ const HeroSection = () => {
                 Swati Durgekar
             </h1>
             <h2 className="text-lg text-purple-400/70">
-                I'm a Software Developer
+                I&apos;m a Software Developer
             </h2>
             <p className="mt-6 text-lg text-gray-300 leading-8">
                 Creating Responsive Websites for customers.
